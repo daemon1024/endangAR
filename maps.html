@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
-        <style>
-            #map {position: absolute; top:0; bottom: 0; left: 0;right: 0;}
-        </style>
-    </head>
-    <body>
-        <div id="map"></div>
-        <script>
-            var map = L.map('map').setView([0,0],1);
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map = L.map("map").setView([0, 0], 1);
 
-            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=9kNhn6BDvecBNLWYwwso', {
-                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-            }).addTo(map);
+      L.tileLayer(
+        "https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=9kNhn6BDvecBNLWYwwso",
+        {
+          attribution:
+            '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+        }
+      ).addTo(map);
 
-            var marker = L.marker([26.73,-110.71]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/FC84' target='_blank'>Vaquita</a><br> 10 Left")
-            var marker = L.marker([8.03,80.82]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/ggvd' target='_blank'>Asian Elephants</a><br> 50,000 Left")
-            var marker = L.marker([43.66,101.52]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/wb5y' target='_blank'>Snow Leopard</a><br> 6590 Left")
-            var marker = L.marker([-1.4,29.56]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/v1Da' target='_blank'>Gorilla</a><br> 1063 Left")
-            var marker = L.marker([-6.78,105.37]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/iHpJ' target='_blank'>Javan Rhinoceros</a><br> 68 Left")
-            var marker = L.marker([15.51,95.14]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/DsgN' target='_blank'>Irrawaddy Dolphins</a><br> 100 Left")
-            var marker = L.marker([29,106]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/RsqR' target='_blank'>Giant Panda</a><br> 1864 Left")
-            var marker = L.marker([23.41,80.57]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/gKne' target='_blank'>Tiger</a><br> 3900 Left")
-            var marker = L.marker([39.32,-111.09]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/4Mph' target='_blank'>Whooping Crane</a><br> 505 Left")
-            var marker = L.marker([36.60,-121.89]).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/WpLu' target='_blank'>Blue Whale</a><br> 24000 Left")
+      var marker = L.marker([26.73, -110.71]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/FC84' target='_blank'>Vaquita</a><br> 10 Left"
+      );
+      var marker = L.marker([8.03, 80.82]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/ggvd' target='_blank'>Asian Elephants</a><br> 50,000 Left"
+      );
+      var marker = L.marker([43.66, 101.52]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/wb5y' target='_blank'>Snow Leopard</a><br> 6590 Left"
+      );
+      var marker = L.marker([-1.4, 29.56]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/v1Da' target='_blank'>Gorilla</a><br> 1063 Left"
+      );
+      var marker = L.marker([-6.78, 105.37]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/iHpJ' target='_blank'>Javan Rhinoceros</a><br> 68 Left"
+      );
+      var marker = L.marker([15.51, 95.14]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/DsgN' target='_blank'>Irrawaddy Dolphins</a><br> 100 Left"
+      );
+      var marker = L.marker([29, 106]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/RsqR' target='_blank'>Giant Panda</a><br> 1864 Left"
+      );
+      var marker = L.marker([23.41, 80.57]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/gKne' target='_blank'>Tiger</a><br> 3900 Left"
+      );
+      var marker = L.marker([39.32, -111.09]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/4Mph' target='_blank'>Whooping Crane</a><br> 505 Left"
+      );
+      var marker = L.marker([36.6, -121.89]).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/WpLu' target='_blank'>Blue Whale</a><br> 24000 Left"
+      );
 
-            var leafletIcon = L.icon({
-                iconUrl: 'point.jpg',
-                iconSize: [40,45],
-                iconAnchor: [22,94],
-                popupAnchor: [12,-90]
-            })
-            var marker = L.marker([29.8,-97.94],{icon:leafletIcon}).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/mXoB' target='_blank'>Texas Wild Rice</a>")            
-            var marker = L.marker([53.76,-98.81],{icon:leafletIcon}).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/gtwc' target='_blank'>Western Prairie Orchid</a>")  
-            var marker = L.marker([0.96,114.55],{icon:leafletIcon}).addTo(map);
-            marker.bindPopup("<a href='https://go.echoar.xyz/onHi' target='_blank'>Rafflesia</a>")  
-        </script>
-    </body>
+      var leafletIcon = L.icon({
+        iconUrl: "assets/point.jpg",
+        iconSize: [40, 45],
+        iconAnchor: [22, 94],
+        popupAnchor: [12, -90],
+      });
+      var marker = L.marker([29.8, -97.94], { icon: leafletIcon }).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/mXoB' target='_blank'>Texas Wild Rice</a>"
+      );
+      var marker = L.marker([53.76, -98.81], { icon: leafletIcon }).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/gtwc' target='_blank'>Western Prairie Orchid</a>"
+      );
+      var marker = L.marker([0.96, 114.55], { icon: leafletIcon }).addTo(map);
+      marker.bindPopup(
+        "<a href='https://go.echoar.xyz/onHi' target='_blank'>Rafflesia</a>"
+      );
+    </script>
+  </body>
 </html>
