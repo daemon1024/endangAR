@@ -5,6 +5,13 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
       #map {
@@ -13,11 +20,31 @@
         bottom: 0;
         left: 0;
         right: 0;
+        height: 100%;
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <div class="modal fade" id="featureModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-primary" id="feature-title"></h4>
+          </div>
+          <div class="modal-body" id="feature-info">
+            <!-- <iframe id="feature-info" height="720px" width="100%"></iframe> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       type="text/javascript"
       language="javascript"
@@ -49,9 +76,16 @@
       });
       list.plants.map((data) => {
         var marker = L.marker(data.longlat, { icon: leafletIcon }).addTo(map);
-        marker.bindPopup(
-          `<a href=${data.link} target='_blank'>${data.title}</a><br>`
-        );
+        marker.on({
+          click: function (e) {
+            let title = document.getElementById("feature-title");
+            title.innerText = data.title;
+            $(document).ready(function () {
+              $("#feature-info").load(data.link);
+            });
+            $("#featureModal").modal("show");
+          },
+        });
       });
     </script>
   </body>
