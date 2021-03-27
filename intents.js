@@ -6,7 +6,7 @@ var list = {
       left: 10,
       longlat: [26.73, -110.71],
       foundin: ["Northern part of Gulf of Mexico"],
-      
+      info: "- They have unique facial markings with a black ring around each eye and curved, black lips that make them look as if they are smiling.- https://en.wikipedia.org/wiki/Vaquita",
     },
     {
       title: "Asian Elephants",
@@ -18,6 +18,7 @@ var list = {
         "Nagarhole Reserves Karnataka,India",
         "Sumatra,Indonesia",
       ],
+      info: "- Asian elephants can tear down trees or pick up a blade of grass with their trunks.- https://en.wikipedia.org/wiki/Asian_elephant",
     },
     {
       title: "Snow Leopard",
@@ -30,6 +31,7 @@ var list = {
         "Shey-Phoksundo National Park, Nepal",
         "Hemis National Park.India",
       ],
+      info: "- They can nearly cover the distance of a marathon in one night.- https://en.wikipedia.org/wiki/Snow_leopard",
     },
     {
       title: "Gorilla",
@@ -42,6 +44,7 @@ var list = {
         "Virunga National Park,Congo",
         " Bwindi Impenetrable National Park,Uganda",
       ],
+      info: "- Some gorillas in captivity have learned to use sign language to communicate with humans.- https://en.wikipedia.org/wiki/Gorilla",
     },
     {
       title: "Javan Rhinoceros",
@@ -49,6 +52,7 @@ var list = {
       left: 68,
       longlat: [-6.78, 105.37],
       foundin: ["Ujung Kulon National Park,Indonesia"],
+      info: "- They're solitary animals, except for mating pairs and mothers with young.- https://en.wikipedia.org/wiki/Javan_rhinoceros",
     },
     {
       title: "Irrawaddy Dolphins",
@@ -56,6 +60,7 @@ var list = {
       left: 100,
       longlat: [15.51, 95.14],
       foundin: ["Ayeyarwady River, Myanmar", "Mahakam River, Indonesian"],
+      info: "- They are often seen spyhopping and observing the environment around them.- https://en.wikipedia.org/wiki/Irrawaddy_dolphin",
     },
     {
       title: "Giant Panda",
@@ -63,6 +68,7 @@ var list = {
       left: 1864,
       longlat: [29, 106],
       foundin: ["South-West, China"],
+      info: "- They occasionally eat something other than bamboo.- https://en.wikipedia.org/wiki/Giant_panda",
     },
     {
       title: "Tiger",
@@ -78,6 +84,7 @@ var list = {
         "Siberia",
         "Nepal",
       ],
+      info: "- Tigers love to swim and play in the water.- https://en.wikipedia.org/wiki/Tiger",
     },
     {
       title: "Whooping Crane",
@@ -85,6 +92,7 @@ var list = {
       left: 505,
       longlat: [39.32, -111.09],
       foundin: ["North-America", "Central Mexico", "Utah"],
+      info: "-  Adult Whooping Cranes are identified by a red skin patch on their forehead, black “mustache” and legs, and black wing tips visible in flight.- https://en.wikipedia.org/wiki/Whooping_crane",
     },
     // {
     //   title: "Tasmanian Devil",
@@ -103,6 +111,7 @@ var list = {
         "Coast of Monterey",
         "baja California,Mexico",
       ],
+      info: "- Blue whales are the largest animals ever known to have lived on Earth.- https://en.wikipedia.org/wiki/Blue_whale",
     },
   ],
   plants: [
@@ -111,6 +120,7 @@ var list = {
       link: "https://console.echoar.xyz/webar?key=fragrant-mountain-7260&entry=008f63dd-6726-4f74-b7e4-3b469347e93e",
       longlat: [29.8, -97.94],
       foundin: ["San Macros"],
+      info: "-  It has green leaves up to forty-five inches in length and a quarter inch to one inch wide.- https://en.wikipedia.org/wiki/Zizania_texana",
     },
     {
       title: "Western Prairie Orchid",
@@ -126,12 +136,14 @@ var list = {
         "Nebraska",
         "Kansas",
       ],
+      info: "- Orchids are one of the oldest family of flowering plants.- https://en.wikipedia.org/wiki/Platanthera_praeclara",
     },
     {
       title: "Rafflesia",
       link: "https://console.echoar.xyz/webar?key=fragrant-mountain-7260&entry=e9ce2e42-d4a7-4a3c-8fa8-7cd33a1c8bef",
       longlat: [0.96, 114.55],
       foundin: ["Borneo", "Sumatra"],
+      info: "- It takes about nine months for the flower to bloom and it can only last for a week.- https://en.wikipedia.org/wiki/Rafflesia",
     },
   ],
 };
