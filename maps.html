@@ -72,7 +72,7 @@
         marker.on({
           click: function (e) {
             $("#feature-title").text(data.title);
-            $("#content").text("Hello World");
+            $("#content").text(data.info);
             $(document).ready(function () {
               $("#echoar").load(data.link);
             });
