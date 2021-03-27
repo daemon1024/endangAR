@@ -45,7 +45,7 @@ var list = {
     },
     {
       title: "Javan Rhinoceros",
-      link: "https://console.echoar.xyz/webar?key=fragrant-mountain-7260&entry=a402342b-0fe2-4c1f-abd5-4109a3c00f7a,
+      link: "https://console.echoar.xyz/webar?key=fragrant-mountain-7260&entry=a402342b-0fe2-4c1f-abd5-4109a3c00f7a",
       left: 68,
       longlat: [-6.78, 105.37],
       foundin: ["Ujung Kulon National Park,Indonesia"],
