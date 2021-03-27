@@ -71,10 +71,10 @@
         var marker = L.marker(data.longlat).addTo(map);
         marker.on({
           click: function (e) {
-            let title = document.getElementById("feature-title");
-            title.innerText = data.title;
+            $("#feature-title").text(data.title);
+            $("#content").text("Hello World");
             $(document).ready(function () {
-              $("#feature-info").load(data.link);
+              $("#echoar").load(data.link);
             });
             $("#featureModal").modal("show");
           },
@@ -91,8 +91,14 @@
         var marker = L.marker(data.longlat, { icon: leafletIcon }).addTo(map);
         marker.on({
           click: function (e) {
-            $("#feature-title").append(data.title);
-            $("#content").append("Hello World");
+            $("#feature-title").text(data.title);
+            $("#content").text(`Texas Wild rice
+                                    -  It has green leaves up to forty-five inches in length and a quarter inch to one inch wide
+                                    - https://en.wikipedia.org/wiki/Zizania_texana`);
+            $("#echoar").html(`<img
+                src='https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'
+                alt='ok'
+              />`);
             $(document).ready(function () {
               $("#echoar").load(data.link);
             });

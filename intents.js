@@ -94,7 +94,8 @@ var list = {
     // },
     {
       title: "Blue Whale",
-      link: "https://go.echoar.xyz/WpLu",
+      link:
+        "https://console.echoar.xyz/webar?key=fragrant-mountain-7260&entry=f2cd0994-f758-45c0-961b-2eefd164413f",
       left: 24000,
       longlat: [36.6, -121.89],
       foundin: [
@@ -107,7 +108,8 @@ var list = {
   plants: [
     {
       title: "Texas Wild rice",
-      link: "https://go.echoar.xyz/mXoB",
+      link:
+        "https://console.echoar.xyz/webar?key=fragrant-mountain-7260&entry=008f63dd-6726-4f74-b7e4-3b469347e93e",
       longlat: [29.8, -97.94],
       foundin: ["San Macros"],
     },
