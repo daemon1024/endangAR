@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <head>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <html>
   <body>
@@ -8,7 +14,34 @@
 
     <button onclick="getLocation()">Try It</button>
 
-    <div id="content"></div>
+    <div class="modal fade" id="featureModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title text-primary" id="feature-title">
+              Air Quality Tree
+            </h4>
+          </div>
+          <div class="modal-body" id="feature-info">
+            <div id="echoar">
+              <img
+                src="https://media1.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"
+                alt="ok"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="content"></div>
+    </div>
 
     <script>
       var x = document.getElementById("content");
@@ -27,7 +60,7 @@
         const API_KEY = "01876191fd50c255971302ebdc124040";
 
         var data = $.get(
-          `http://api.openweathermap.org/data/2.5/air_pollution?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${API_KEY}`,
+          `https://api.openweathermap.org/data/2.5/air_pollution?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${API_KEY}`,
           function (data) {
             console.log(data);
             const API_KEY = "fragrant-mountain-7260";
@@ -49,16 +82,17 @@
               `https://console.echoAR.xyz/post?key=${API_KEY}&entry=${ENTRY}&data=aqi&value=${aqi}`,
               function (data) {
                 $(document).ready(function () {
-                  $("#content").load(
+                  $("#echoar").load(
                     `https://console.echoAR.xyz/webar?key=${API_KEY}&entry=${ENTRY}`
                   );
                 });
+                $("#featureModal").modal("show");
               }
             );
           }
         );
         // console.log(data);
-        console.log("hello");
+        // console.log("hello");
 
         x.innerHTML = "Loading . . . ";
       }
